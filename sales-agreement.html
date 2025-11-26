@@ -54,10 +54,47 @@
                         <a href="privacy-policy.html">Privacy Policy</a>
                     </div>
                 </div>
-                <button class="cta-button" onclick="window.location.href='mailto:info@merrymuzzlepets.com?subject=Merry Muzzle Pets Inquiry'">Inquire Now</button>
+                <button class="cta-button" onclick="window.location.href='contact.html'">Inquire Now</button>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="available-puppies.html">Our Puppies</a>
+            <a href="reviews.html">Testimonials</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-dropdown-btn">
+                    Useful Info
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="mobile-dropdown-content">
+                    <a href="faqs.html">FAQs</a>
+                    <a href="about-breed.html">About The Breed</a>
+                    <a href="basic-care.html">Basic Care</a>
+                    <a href="health-guarantee.html">Health Guarantee</a>
+                    <a href="pickup-delivery.html">Pickup & Delivery</a>
+                    <a href="return-refund.html">Return Policy</a>
+                    <a href="vaccinations.html">Vaccinations</a>
+                    <a href="sales-agreement.html">Sales Agreement</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-nav-cta">
+            <button class="cta-button" onclick="window.location.href='contact.html'">Inquire Now</button>
+        </div>
+    </div>
 
     <main class="agreement-page">
         <div class="container">
@@ -70,19 +107,19 @@
             </div>
 
             <form class="agreement-form web3form" action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="2b7794b2-ad87-44fd-b8b2-81f94982f768">
+                <input type="hidden" name="access_key" value="c7f6fd29-2f86-4b47-8e09-4a98b9ca26e3">
                 <input type="hidden" name="formName" value="Sales Agreement">
                 <input type="hidden" name="subject" value="Merry Muzzle Pets Sales Agreement Submission">
                 <input type="hidden" name="from_name" value="Merry Muzzle Pets Website">
                 <input type="hidden" name="redirect" value="thank-you.html">
                 <div class="agreement-card">
-                    <h3>Buyer’s Information</h3>
+                    <h3>Buyer's Information</h3>
                     <div class="form-row">
                         <input class="input-control" type="text" name="buyerName" placeholder="Enter Your Names" required>
                         <input class="input-control" type="tel" name="phone" placeholder="Phone" required>
                     </div>
                     <div class="form-row">
-                        <input class="input-control" type="email" name="email" placeholder="Your Email" required>
+                        <input class="input-control" type="email" name="replyto" placeholder="Your Email" required>
                         <input class="input-control" type="text" name="address" placeholder="Address" required>
                     </div>
                     <div class="form-row">
@@ -92,17 +129,16 @@
 
                     <div class="agreement-divider"></div>
 
-                    <h3>Pet’s Information</h3>
+                    <h3>Pet's Information</h3>
                     <div class="option-inline">
-                        <label><input type="checkbox" name="petName" value="Penny"> Penny</label>
-                        <label><input type="checkbox" name="petName" value="Koda"> Koda</label>
-                        <label><input type="checkbox" name="petName" value="Kong"> Kong</label>
-                        <label><input type="checkbox" name="petName" value="Chowie"> Chowie</label>
-                        <label><input type="checkbox" name="petName" value="Dahlia"> Dahlia</label>
-                        <label><input type="checkbox" name="petName" value="Storm"> Storm</label>
-                        <label><input type="checkbox" name="petName" value="Moxie"> Moxie</label>
-                        <label><input type="checkbox" name="petName" value="Snowball"> Snowball</label>
-                        <label><input type="checkbox" name="petName" value="Ted"> Ted</label>
+                        <label><input type="checkbox" name="petName" value="Buddy"> Buddy</label>
+                        <label><input type="checkbox" name="petName" value="Hugo"> Hugo</label>
+                        <label><input type="checkbox" name="petName" value="Cleo"> Cleo</label>
+                        <label><input type="checkbox" name="petName" value="Dolly"> Dolly</label>
+                        <label><input type="checkbox" name="petName" value="Kobe"> Kobe</label>
+                        <label><input type="checkbox" name="petName" value="Otis"> Otis</label>
+                        <label><input type="checkbox" name="petName" value="Stitch"> Stitch</label>
+                        <label><input type="checkbox" name="petName" value="Sushi"> Sushi</label>
                     </div>
 
                     <div class="agreement-divider"></div>
@@ -218,9 +254,7 @@
                     <h4>Contact Info</h4>
                     <ul>
                         <li>info@merrymuzzlepets.com</li>
-                        <li>(555) 123-4567</li>
-                        <li>123 Breeder Lane</li>
-                        <li>Rural Area, ST 12345</li>
+                        <li>Address shared upon inquiry</li>
                     </ul>
                 </div>
             </div>

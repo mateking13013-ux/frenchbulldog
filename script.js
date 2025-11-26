@@ -78,13 +78,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle (if needed for future mobile menu)
+    // Mobile navigation toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    if (mobileMenuToggle && mobileMenu) {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileNavOverlay = document.querySelector('.mobile-nav-overlay');
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+    function openMobileNav() {
+        mobileMenuToggle.classList.add('active');
+        mobileNav.classList.add('active');
+        mobileNavOverlay.classList.add('active');
+        document.body.classList.add('mobile-nav-open');
+    }
+
+    function closeMobileNav() {
+        mobileMenuToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+        mobileNavOverlay.classList.remove('active');
+        document.body.classList.remove('mobile-nav-open');
+    }
+
+    if (mobileMenuToggle && mobileNav && mobileNavOverlay) {
+        // Toggle menu on hamburger click
         mobileMenuToggle.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
+            if (mobileNav.classList.contains('active')) {
+                closeMobileNav();
+            } else {
+                openMobileNav();
+            }
+        });
+
+        // Close menu on overlay click
+        mobileNavOverlay.addEventListener('click', closeMobileNav);
+
+        // Close menu when clicking a link
+        const mobileNavLinks = mobileNav.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileNav);
+        });
+
+        // Handle mobile dropdown toggles
+        mobileDropdowns.forEach(dropdown => {
+            const dropdownBtn = dropdown.querySelector('.mobile-dropdown-btn');
+            if (dropdownBtn) {
+                dropdownBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                closeMobileNav();
+            }
         });
     }
 
