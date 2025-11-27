@@ -611,19 +611,11 @@
                             <span>Message</span>
                             <textarea name="message" rows="4" placeholder="Share any details or questions"></textarea>
                         </label>
-                        <div class="field">
-                            <span>Select Puppy Interested In <b>*</b></span>
-                            <div class="puppy-checkboxes">
-                                <label><input type="checkbox" name="puppy" value="Buddy"> Buddy</label>
-                                <label><input type="checkbox" name="puppy" value="Hugo"> Hugo</label>
-                                <label><input type="checkbox" name="puppy" value="Cleo"> Cleo</label>
-                                <label><input type="checkbox" name="puppy" value="Dolly"> Dolly</label>
-                                <label><input type="checkbox" name="puppy" value="Kobe"> Kobe</label>
-                                <label><input type="checkbox" name="puppy" value="Otis"> Otis</label>
-                                <label><input type="checkbox" name="puppy" value="Stitch"> Stitch</label>
-                                <label><input type="checkbox" name="puppy" value="Sushi"> Sushi</label>
-                            </div>
-                        </div>
+                        <label class="field">
+                            <span>Puppy Interested In <b>*</b></span>
+                            <input type="text" name="puppy" placeholder="Type puppy name" required>
+                            <p style="font-size: 0.85em; color: #000; margin-top: 0.5em;">Available: <b>Buddy</b>, <b>Hugo</b>, <b>Cleo</b>, <b>Dolly</b>, <b>Kobe</b>, <b>Otis</b>, <b>Stitch</b>, <b>Sushi</b></p>
+                        </label>
                         <button type="submit" class="btn-primary full-width">Submit Form</button>
                         <div class="form-message form-status" aria-live="polite"></div>
                     </form>
